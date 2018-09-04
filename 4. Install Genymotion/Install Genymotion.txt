@@ -1,0 +1,11 @@
+Install Genymotion
+
+username: ruhulodduu@gmail.com
+password: odduu1234
+
+install Genymotion Plugins in Android Studio
+File-> Setting-> Plugins-> Brows repositories-> genymotion-> Install
+Restart Android Studio
+
+Connect Genymotion witn Android Studio
+File-> Setting->Other Setting-> Genymotion Location in PC(C:\Program Files\Genymobile\Genymotion)-> Ok
