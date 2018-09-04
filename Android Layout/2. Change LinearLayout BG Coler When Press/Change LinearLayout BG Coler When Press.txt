@@ -1,0 +1,27 @@
+1. Create Drawable Resource file for background
+
+backgroind.xml
+--------------
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+        android:drawable="@drawable/pressed" />
+    <item  android:state_focused="false"
+        android:drawable="@drawable/normal" />
+</selector>
+
+2. Create Drawable Resource file for pressed
+pressed.xml
+--------------
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#acacac"/>
+</shape>
+
+3. Create Drawable Resource file for normal
+normal.xml
+----------
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#ffffff"/>
+</shape>
