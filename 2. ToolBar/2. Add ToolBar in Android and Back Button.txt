@@ -1,0 +1,36 @@
+Add ToolBar in Android
+
+1. XML Design:
+-------------
+Add this in the activity that we want to desplay the ToolBar
+
+<android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/user_upload_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="#2fae73"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+</android.support.design.widget.AppBarLayout>
+
+2. Java part
+------------
+Toolbar toolbar = (Toolbar) findViewById(R.id.user_upload_toolbar);
+toolbar.setTitle("Home");
+setSupportActionBar(toolbar);
+
+//add back arrow icon
+getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+//Goto Previous ctivity when press back arrow icon
+@Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
