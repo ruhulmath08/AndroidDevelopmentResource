@@ -1,0 +1,4 @@
+Get Current Date in Android:
+----------------------------
+
+String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());

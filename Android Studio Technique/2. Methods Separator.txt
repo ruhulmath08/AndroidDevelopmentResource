@@ -1,0 +1,12 @@
+Method Seperator:
+-----------------
+
+Or hit Shift 2 times in Editor Area type method separators and on the option.
+
+Go to File ->
+Setting ->
+Editor -> 
+General -> 
+Appearance -> 
+Show method separators -> 
+check the box

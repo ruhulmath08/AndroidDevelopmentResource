@@ -1,0 +1,5 @@
+Android Studio ShortCut:
+------------------------
+
+1. Formate code (Alt + Ctrl + L)
+2. Generate (Alt + Insert)

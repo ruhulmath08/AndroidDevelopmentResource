@@ -1,0 +1,4 @@
+//for solve CardView problem
+<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="cardViewStyle">@style/CardView</item>
+</style>
