@@ -28,7 +28,7 @@ setSupportActionBar(toolbar);
 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-//Goto Previous ctivity when press back arrow icon
+//Goto Previous activity when press back arrow icon
 @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
