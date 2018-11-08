@@ -1,0 +1,25 @@
+{
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc"]
+    },
+    "source": {
+        "include": ["package.json", "README.md", "src"],
+        "includePattern": ".js$",
+        "excludePattern": "(node_modules/|docs)"
+    },
+    "plugins": [
+        "plugins/markdown"
+    ],
+    "templates": {
+        "referenceTitle": "Test Documentation",
+        "disableSort": false
+    },
+    "opts": {
+        "destination": "./docs/",
+        "encoding": "utf8",
+        "private": true,
+        "recurse": true,
+        "template": "./node_modules/jsdoc-template"
+    }
+}

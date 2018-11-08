@@ -1,0 +1,5 @@
+Firebase offers two cloud-based, client-accessible database solutions that support realtime data syncing:
+
+Realtime Database is Firebase's original database. It's an efficient, low-latency solution for mobile apps that require synced states across clients in realtime.
+
+Cloud Firestore is Firebase's new flagship database for mobile app development. It improves on the successes of the Realtime Database with a new, more intuitive data model. Cloud Firestore also features richer, faster queries and scales better than the Realtime Database.

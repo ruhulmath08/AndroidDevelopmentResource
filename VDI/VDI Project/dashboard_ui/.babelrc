@@ -1,0 +1,2 @@
+{"presets": ["es2015","babel-preset-react"],
+  "plugins": ["transform-flow-strip-types","transform-object-rest-spread", "react-hot-loader/babel"]}
