@@ -1,1 +1,154 @@
-we should TabLayout if we navigate two fragment
+-> we should use TabLayout if we navigate two or three fragment
+-> we should use BottmNevigation view if we navigate more than three fragment
+-> we should use Navigation view if we navigate more than five fragment
+
+TabLayout:
+----------
+
+1) CoordinatorLayout for contain TabLayouty
+
+activity_history.xml
+--------------------
+
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".History">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/history_tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:tabSelectedTextColor="#8c8c8c"
+        app:tabTextAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        app:tabTextColor="@android:color/white"></android.support.design.widget.TabLayout>
+
+    <!--To get the view according to tab-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/history_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+</android.support.design.widget.CoordinatorLayout>
+
+2) Now we have to create Fragment
+
+FragmentEnglish.java
+--------------------
+
+public class FragmentEnglish extends Fragment{
+
+    View view;
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.fragmennt_english_layout, container, false);
+        return view;
+    }
+}
+
+3) Now we have to create Fragment related layout
+
+fragment_english_layout:
+------------------------
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:text="Hello English" />
+
+</LinearLayout>
+
+4) Now we have to create HistoryPagerAdapter that extends FragmentPagerAdapter
+
+HistoryPagerAdapter.java
+------------------------
+
+public class HistoryPagerAdapter extends FragmentPagerAdapter{
+
+    private final List<Fragment> myList = new ArrayList<>();
+    private final List<String> myTitle = new ArrayList<>();
+
+    public HistoryPagerAdapter(FragmentManager fm) {
+        super(fm);
+    }
+
+    @Override
+    public Fragment getItem(int position) {
+        return myList.get(position);
+    }
+
+    @Override
+    public int getCount() {
+        return myList.size();
+    }
+
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return myTitle.get(position);
+    }
+
+    public void addMyFragment(Fragment f,  String title){
+        myList.add(f);
+        myTitle.add(title);
+    }
+}
+
+5) Now we have to create HistoryPagerAdapter that extends FragmentPagerAdapter
+
+History.java
+------------
+
+public class History extends AppCompatActivity {
+
+    private TabLayout historyTabLayout;
+    private ViewPager historyViewPager;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_history);
+
+        //for back arrow button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
+        historyTabLayout = findViewById(R.id.history_tabLayout);
+        historyViewPager = findViewById(R.id.history_viewPager);
+        setUpMyWiewPager(historyViewPager);
+        historyTabLayout.setupWithViewPager(historyViewPager);
+    }
+
+    //setUpMyWiewPager() method
+    private void setUpMyWiewPager(ViewPager vp) {
+        HistoryPagerAdapter historyPagerAdapter = new HistoryPagerAdapter(getSupportFragmentManager());
+        historyPagerAdapter.addMyFragment(new FragmentEnglish(), "Enhlish");
+        historyPagerAdapter.addMyFragment(new FragmentBengali(), "Bengali");
+        vp.setAdapter(historyPagerAdapter);
+    }
+
+    //for back arrow button
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(item.getItemId() == android.R.id.home)
+        {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+}
