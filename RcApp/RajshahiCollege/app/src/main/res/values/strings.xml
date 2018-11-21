@@ -6,4 +6,18 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
+    <!--Home Button-->
+    <string name="history">History</string>
+    <string name="about_college">About College</string>
+    <string name="department">Department</string>
+    <string name="notice">Notice</string>
+    <string name="contact_info">Contact Info</string>
+    <string name="extracurricular">Extracurricular</string>
+    <string name="useful_link">Useful Link</string>
+    <string name="principal">Principal</string>
+    <string name="vice_principal">Vice Principal</string>
+    <string name="ict_training">ICT Training</string>
+    <string name="notable_alumni">Notable Alumni</string>
+    <string name="location">Location</string>
 </resources>
