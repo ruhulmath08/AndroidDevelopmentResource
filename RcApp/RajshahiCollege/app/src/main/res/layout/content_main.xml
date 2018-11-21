@@ -68,7 +68,7 @@
                         android:weightSum="3">
 
                         <LinearLayout
-                            android:id="@+id/id_problemlist"
+                            android:id="@+id/id_history"
                             android:layout_width="0dp"
                             android:layout_height="120dp"
                             android:layout_margin="1dp"
@@ -360,6 +360,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/notable_alumni"
                             android:layout_width="0dp"
                             android:layout_height="120dp"
                             android:layout_margin="1dp"

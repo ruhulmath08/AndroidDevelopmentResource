@@ -18,6 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".NotableAlumni"
+            android:label="Notable Alumni" />
+        <activity
+            android:name=".History"
+            android:label="History" />
     </application>
 
 </manifest>

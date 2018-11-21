@@ -1,5 +1,6 @@
 package ruhul.www.odduu.com.rajshahicollege;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
@@ -11,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -27,6 +29,9 @@ public class MainActivity extends AppCompatActivity
     LinearLayout sliderDotsPanel;
     private int dotsCount;
     private ImageView[] dots;
+
+    //Linear button
+    LinearLayout notableAlumni, history;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +91,28 @@ public class MainActivity extends AppCompatActivity
         //auto slider
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new MyTimeTask(), 2000, 4000);
+
+        //main button
+
+        //history
+        history = findViewById(R.id.id_history);
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, History.class);
+                startActivity(intent);
+            }
+        });
+
+        //notable alumni
+        notableAlumni = findViewById(R.id.notable_alumni);
+        notableAlumni.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, NotableAlumni.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

@@ -1,0 +1,19 @@
+12. WebView(justify text and text size)
+---------------------------------------
+
+XML Part:
+--------
+<WebView
+ android:id="@+id/textContent"
+ android:layout_width="fill_parent"
+ android:layout_height="wrap_content" />
+
+
+ Java Part:
+ ----------
+WebView view = (WebView) findViewById(R.id.textContent);
+String text;
+text = "<html><body><p align=\"justify\">";
+text+= "This is the text will be justified when displayed!!!";
+text+= "</p></body></html>";
+view.loadData(text, "text/html", "utf-8");
