@@ -2,13 +2,39 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:orientation="vertical"
+    android:paddingLeft="3dp"
+    android:gravity="center"
+    >
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:text="Hello English" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <WebView
+                android:id="@+id/web_view_RcbreafH"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+            </WebView>
+
+            <WebView
+                android:id="@+id/web_view_Endnote"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+            </WebView>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
