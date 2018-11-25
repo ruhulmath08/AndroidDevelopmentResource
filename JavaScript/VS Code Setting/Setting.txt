@@ -1,0 +1,16 @@
+After install setting the following thing
+
+1) File -> Preferences -> settings -> Open settings.json and write the following code
+    {
+        "window.zoomLevel": 0,
+        "editor.fontSize": 14,
+        "files.autoSave": "afterDelay",
+        "editor.wordWrap": "on",
+    }
+
+2) install the following extension
+    a) Live Server
+    b) JavaScript (ES6)
+    c) Auto Close Tag
+    d) Auto Rename Tag
+    e) Azure for terminal
