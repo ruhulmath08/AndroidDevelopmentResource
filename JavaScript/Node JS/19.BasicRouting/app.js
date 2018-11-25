@@ -15,7 +15,7 @@ var fs = require('fs');
 
 var server = http.createServer(function (req, res) {
     console.log('Request was made: ' + req.url);
-    if (req.url === '/home' || req.url === '/') {
+    if (req.url === '/homepage' || req.url === '/') {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         fs.createReadStream(__dirname + '/index.html').pipe(res);
     }
