@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity
     private ImageView[] dots;
 
     //Linear button
-    LinearLayout notableAlumni, history, principal, vicePrincipal;
+    LinearLayout notableAlumni, history, principal, vicePrincipal, departments;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,6 +120,16 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, VicePrincipal.class);
+                startActivity(intent);
+            }
+        });
+
+        //departments
+        departments = findViewById(R.id.id_departments);
+        departments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Departments.class);
                 startActivity(intent);
             }
         });
