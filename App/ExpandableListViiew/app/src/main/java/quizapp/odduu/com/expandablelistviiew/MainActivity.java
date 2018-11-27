@@ -3,6 +3,7 @@ package quizapp.odduu.com.expandablelistviiew;
 import android.content.pm.PackageManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
@@ -45,54 +46,47 @@ public class MainActivity extends AppCompatActivity {
                 GroupInfo headerInfo = deptList.get(groupPosition);
                 //get the child info
                 ChildInfo detailInfo = headerInfo.getProductList().get(childPosition);
-
                 //Open my custom activity
-
-                //Office Staff Start
-                if (detailInfo.getName().equals("Office Staff")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-                //Office Staff End
 
                 // (a) ARTS DIVISION START
                 //01. Arabic and Islamic Studies Department
-                if(detailInfo.getName().equals("Arabic and Islamic Studies")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                if (detailInfo.getName().equals("Arabic and Islamic Studies")) {
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //02. Bengali Department
-                if(detailInfo.getName().equals("Bengali")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                if (detailInfo.getName().equals("Bengali")) {
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //03. English Department
-                if(detailInfo.getName().equals("English")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                if (detailInfo.getName().equals("English")) {
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //04. History Department
-                if(detailInfo.getName().equals("History")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                if (detailInfo.getName().equals("History")) {
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //05. Islamic History and Culture Department
-                if(detailInfo.getName().equals("Islamic History and Culture")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                if (detailInfo.getName().equals("Islamic History and Culture")) {
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //06.  Philosophy Department
-                if(detailInfo.getName().equals("Philosophy")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                if (detailInfo.getName().equals("Philosophy")) {
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //07. Sanskrit Department
-                if(detailInfo.getName().equals("Sanskrit")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                if (detailInfo.getName().equals("Sanskrit")) {
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //08. Urdu Department
-                if(detailInfo.getName().equals("Urdu")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                if (detailInfo.getName().equals("Urdu")) {
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //(a) ARTS DIVISION END
@@ -100,67 +94,67 @@ public class MainActivity extends AppCompatActivity {
 
                 //(b)BUSINESS STUDIES  DIVISION START
                 //01. Accounting
-                if(detailInfo.getName().equals("Accounting")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                if (detailInfo.getName().equals("Accounting")) {
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //02. Finance and Banking
-                if(detailInfo.getName().equals("Finance and Banking")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                if (detailInfo.getName().equals("Finance and Banking")) {
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //03. Management
-                if(detailInfo.getName().equals("Management")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                if (detailInfo.getName().equals("Management")) {
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //04. Marketing
-                if(detailInfo.getName().equals("Marketing")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                if (detailInfo.getName().equals("Marketing")) {
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
                 //(b)BUSINESS STUDIES  DIVISION END
 
 
                 // (c) SCIENCE DIVISION START
                 //01. Botany Department
-                if(detailInfo.getName().equals("Botany")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                if (detailInfo.getName().equals("Botany")) {
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //02. Chemistry Department
-                if(detailInfo.getName().equals("Chemistry")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                if (detailInfo.getName().equals("Chemistry")) {
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //03. Geography and Environment Department
-                if(detailInfo.getName().equals("Geography and Environment")) {
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                if (detailInfo.getName().equals("Geography and Environment")) {
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //04. Mathematics Department
                 if (detailInfo.getName().equals("Mathematics")) {
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //05. Physics Department
                 if (detailInfo.getName().equals("Physics")) {
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //06. Psychology Department
-                if(detailInfo.getName().equals("Psychology")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                if (detailInfo.getName().equals("Psychology")) {
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
 
                 //07. Statistics Department
-                if(detailInfo.getName().equals("Statistics")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                if (detailInfo.getName().equals("Statistics")) {
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //08. Zoology Department
                 if (detailInfo.getName().equals("Zoology")) {
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
                 // (c) SCIENCE DIVISION START
 
@@ -168,171 +162,36 @@ public class MainActivity extends AppCompatActivity {
                 // (d) SOCIAL SCIENCE DIVISION START
                 //01. Economics
                 if (detailInfo.getName().equals("Economics")) {
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //02. Political Science
                 if (detailInfo.getName().equals("Political Science")) {
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //03. Social Work
                 if (detailInfo.getName().equals("Social Work")) {
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //04. Sociology
                 if (detailInfo.getName().equals("Sociology")) {
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
                 // (d) SOCIAL SCIENCE DIVISION END
 
                 //ICT Course START
                 //01. NU One Year ICT Course
-                if(detailInfo.getName().equals("NU One Year ICT Course")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                if (detailInfo.getName().equals("National University One Year ICT Course")) {
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
 
                 //02. Rajshahi College ICT Course
-                if(detailInfo.getName().equals("Rajshahi College ICT Course")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
+                if (detailInfo.getName().equals("Rajshahi College Own ICT Course")) {
+                    Toast.makeText(MainActivity.this, "Clicked on: " + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 }
                 //ICT Course END
-
-
-
-                //College Library
-                if(detailInfo.getName().equals("Rajshahi College Central Library")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //Extra Curriculum
-                //01. Rajshahi college business club
-                if (detailInfo.getName().equals("Rajshahi College Business Club")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //02. Mirror English Debating Club
-                if(detailInfo.getName().equals("Mirror English Debating Club")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //03. BNCC Unit RC
-                if (detailInfo.getName().equals("BNCC")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //04. Rover Scout RC
-                if (detailInfo.getName().equals("Rover Scout")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //05. Ranger Unit RC
-                if (detailInfo.getName().equals("Ranger")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //06. Badhon Unit RC
-                if (detailInfo.getName().equals("Badhon")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //07. Science Club Unit RC
-                if (detailInfo.getName().equals("Science Club")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //08. Sangeet Charcha Kendra Club Unit RC
-                if (detailInfo.getName().equals("Sangeet Charcha Kendra")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //09. Barind Theatre RC
-                if (detailInfo.getName().equals("Barind Theatre")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //10. Natyo Sangsad
-                if (detailInfo.getName().equals("Natyo Sangsad")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //11. Anneshan
-                if (detailInfo.getName().equals("Anneshan")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //12. Abritti Parishad
-                if (detailInfo.getName().equals("Abritti Parishad")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //13. Nritya Charcha Kendra
-                if (detailInfo.getName().equals("Nritya Charcha Kendra")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //14. Sociology Debate Club
-                if (detailInfo.getName().equals("Sociology Debate Club (SDC)")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //15. Rajshahi College Career Club
-                if (detailInfo.getName().equals("Rajshahi College Career Club")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //16. Rajshahi Colleg Creative Club
-                if (detailInfo.getName().equals("Rajshahi Colleg Creative Club")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //17. MUNIARC
-                if (detailInfo.getName().equals("MUNIARC")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //18. Redcrescent Unit
-                if (detailInfo.getName().equals("Redcrescent Unit")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //19. Photography Club
-                if (detailInfo.getName().equals("Photography Club")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-
-                //20. Rajshahi College  Reporters Unity
-                if (detailInfo.getName().equals("Rajshahi College  Reporters Unity")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //21. Rotari Club
-                if (detailInfo.getName().equals("Rotari Club")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //22. ANINDITA
-                if (detailInfo.getName().equals("ANINDITA")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //23. Social Work Innovative Club
-                if (detailInfo.getName().equals("Social Work Innovative Club")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-                //24. Rajshahi College Community Policing
-                if (detailInfo.getName().equals("RC Community Policing")){
-                    Toast.makeText(MainActivity.this, "Clicked on: "+detailInfo.getName(), Toast.LENGTH_SHORT).show();
-                }
-
-
-
-
-                Toast.makeText(getBaseContext(), " Clicked on :: " + headerInfo.getName()
-                        + "/" + detailInfo.getName(), Toast.LENGTH_SHORT).show();
                 return false;
             }
         });
@@ -354,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
     //method to expand all groups
     private void expandAll() {
         int count = listAdapter.getGroupCount();
-        for (int i = 0; i < count; i++){
+        for (int i = 0; i < count; i++) {
             simpleExpandableListView.expandGroup(i);
         }
     }
@@ -362,16 +221,13 @@ public class MainActivity extends AppCompatActivity {
     //method to collapse all groups
     private void collapseAll() {
         int count = listAdapter.getGroupCount();
-        for (int i = 0; i < count; i++){
+        for (int i = 0; i < count; i++) {
             simpleExpandableListView.collapseGroup(i);
         }
     }
 
     //load some initial data into out list
     private void loadData() {
-
-        addProduct("Office", "Office Staff");
-
         addProduct("Arts", "Arabic and Islamic Studies");
         addProduct("Arts", "Bengali");
         addProduct("Arts", "English");
@@ -400,30 +256,8 @@ public class MainActivity extends AppCompatActivity {
         addProduct("Social Science", "Social Work");
         addProduct("Social Science", "Sociology");
 
-        addProduct("Co-Curriculum", "Rajshahi College Business Club");
-        addProduct("Co-Curriculum", "Mirror English Debating Club");
-        addProduct("Co-Curriculum", "BNCC");
-        addProduct("Co-Curriculum", "Rover Scout");
-        addProduct("Co-Curriculum", "Ranger");
-        addProduct("Co-Curriculum", "Badhon");
-        addProduct("Co-Curriculum", "Science Club");
-        addProduct("Co-Curriculum", "Sangeet Charcha Kendra");
-        addProduct("Co-Curriculum", "Barind Theatre");
-        addProduct("Co-Curriculum", "Natyo Sangsad");
-        addProduct("Co-Curriculum", "Anneshan");
-        addProduct("Co-Curriculum", "Abritti Parishad");
-        addProduct("Co-Curriculum", "Nritya Charcha Kendra");
-        addProduct("Co-Curriculum", "Sociology Debate Club (SDC)");
-        addProduct("Co-Curriculum", "Rajshahi College Career Club");
-        addProduct("Co-Curriculum", "Rajshahi Colleg Creative Club");
-        addProduct("Co-Curriculum", "MUNIARC");
-        addProduct("Co-Curriculum", "Redcrescent Unit");
-        addProduct("Co-Curriculum", "Photography Club");
-        addProduct("Co-Curriculum", "Rajshahi College  Reporters Unity");
-        addProduct("Co-Curriculum", "Rotari Club");
-        addProduct("Co-Curriculum", "ANINDITA");
-        addProduct("Co-Curriculum", "Social Work Innovative Club");
-        addProduct("Co-Curriculum", "RC Community Policing");
+        addProduct("ICT", "National University One Year ICT Course");
+        addProduct("ICT", "Rajshahi College Own ICT Course");
     }
 
     //here we maintain our products in various departments

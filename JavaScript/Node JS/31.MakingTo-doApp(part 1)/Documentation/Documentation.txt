@@ -1,0 +1,18 @@
+Part-1:
+------
+1) Clone the git repository "https://github.com/iamshaunjp/node-js-playlist".
+
+2) Copy the public repository and paste inside our project.
+
+3) Now insise our project go to command prompot and create project
+    a) npm init
+    b) package name : to_do_app
+    c) entry point: app.js
+    d) author: me
+
+4) install the following packages.
+    1) express: npm install express -save
+    2) ejs: npm install ejs -save
+    3) body-parser: npm install body-parser -save
+
+#35 - Intro to NoSQL / MongoDB

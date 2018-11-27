@@ -3,7 +3,9 @@ package quizapp.odduu.com.expandablelistviiew;
 /**
  * Created by HP PC on 8/7/2016.
  */
+
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -91,6 +93,14 @@ public class CustomAdapter extends BaseExpandableListAdapter {
         TextView heading = (TextView) view.findViewById(R.id.heading);
         heading.setText(headerInfo.getName().trim());
 
+        //add code for expand plus and minus icon add heading color
+        if (isLastChild) {
+            heading.setTextColor(Color.BLUE);
+            heading.setCompoundDrawablesWithIntrinsicBounds(R.drawable.remove_icon,0, 0,  0);
+        } else {
+            heading.setTextColor(Color.BLACK);
+            heading.setCompoundDrawablesWithIntrinsicBounds(R.drawable.add_icon, 0, 0, 0);
+        }
         return view;
     }
 
