@@ -1,0 +1,42 @@
+Retrofit:
+---------
+Retrofit is an awesome type-safe HTTP client for Android and Java built by awesome folks at Square. Retrofit makes it easy to consume JSON or XML data which is parsed into Plain Old Java Objects (POJOs).
+
+What is Retrofit?
+------------------
+Retrofit is a type-safe HTTP client for Android and Java. You can make network requests using Retrofit and it is used in android to call RESTful APIs. 
+
+Why Retrofit?
+--------------
+Though it is not necessary that you use a library like Retrofit for the network calls in your application. But if you will not use a library you have to take care of a lot of things, and it increases the task and amount of code. 
+Whereas Retrofit has predefined methods to quickly perform network requests. We also have other libraries in android for example volley, but if you are still using Volley for network operations then it is highly recommended that you should migrate to retrofit now. Retrofit is better than volley. 
+
+In this Retrofit Android Tutorial series we will learn a lot of things. We will learn
+- Building RESTful API using SLIM framework
+- Making the calls from our android app using Retrofit
+- We will also learn deploying the REST API 
+
+Meanwhile if you think this series will help you please SHARE it with your friends learning Android Development. 
+
+What is REST API:
+-----------------
+A REST API defines a set of functions which developers can perform requests and receive responses via HTTP protocol such as GET and POST.
+
+An API stands for application programming interface, or a defined way for another program to interact with your program.
+
+REST stands for REpresentational State Transfer and is an architectural style for exposing your program using existing protocols, typically HTTP. Think of it as hyperlinks (URL) you type in your browser to access different parts of your app respectively.
+
+REST APIs leverage HTTP request types to indicate the desired action:
+
+GET /type/ (list all records of that type)
+
+GET /type/id (return record with that id)
+
+GET /user/1/friends (return related friends of user with ID 1)
+
+POST /user (create a new user record)
+
+PUT /user/1 (update record for user with ID 1)
+
+DELETE /user/1 (delete user with ID 1)
+
