@@ -1,4 +1,0 @@
-1) Auto Formate Code
-    Shift + ALT + F
-
-2) 
