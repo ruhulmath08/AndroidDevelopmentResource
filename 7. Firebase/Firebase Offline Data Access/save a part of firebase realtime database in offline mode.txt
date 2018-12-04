@@ -1,0 +1,5 @@
+save a part of firebase realtime database in offline mode
+---------------------------------------------------------
+
+Link:
+https://stackoverflow.com/questions/51682412/how-to-save-a-part-of-firebase-realtime-database-in-offline-mode

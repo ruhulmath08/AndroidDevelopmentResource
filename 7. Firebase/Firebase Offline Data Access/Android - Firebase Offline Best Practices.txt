@@ -1,0 +1,25 @@
+Android - Firebase Offline Best Practices
+-----------------------------------------
+
+Link:
+https://stackoverflow.com/questions/37507425/android-firebase-offline-best-practices
+
+Create an Application Class
+---------------------------
+
+public class MyApp extends Application {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
+    }
+}
+
+And Change your manifest as
+---------------------------
+
+<application
+    android:name=".MyApp"
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
